@@ -1,0 +1,256 @@
+
+<!-- saved from url=(0035)https://netinfo.takming.edu.tw/tip/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=Big5">
+
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta name="’viewport’" content="’width=device-width;" initial-scale="1.0;’">
+<title>TIP登入</title>
+<!--<LINK 
+href="image/Style_hr.css" type=text/css rel=stylesheet>-->
+<script language="javascript">
+ 
+ var dlg;
+ var i;
+ var sid;
+ var no;
+
+  function BackIndex()
+ {  
+   URL = '/nquery_general/comm_index.php';
+   window.location.href=URL;
+ }
+
+function ForgetPWD(){    
+	document.Books.action='forgetpwd.php';
+	document.Books.submit();
+}
+
+ function DeleteConfirm() {
+	if ( confirm("是否確定要刪除這一筆資料？")) {
+		return true ;
+	}
+	return false ;
+ }
+
+ function ExitThis() {
+   window.opener.document.location.reload();
+   return true;
+ }
+  
+  function ChangePage( num ) {
+	document.Books.submit() ;
+}
+
+
+function refreshcap() {
+	
+	//alert("refresh image "+Date.now());	
+   document.getElementById("cap").src = "image.php?" + Date.now();
+	
+}
+
+
+window.onload = function(e){
+	refreshcap();
+	//history.replaceState(null, document.title, '/');
+}
+</script>
+
+<style type="text/css">
+.table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.table-responsive table{
+    width:100%;
+    white-space: nowrap;
+}
+
+
+<!--
+.style18 {color: #000099}
+
+table{
+   	border-collapse: separate;
+   	width: 770px; 	
+   	/*自動斷行*/
+   	word-wrap: break-word;
+	white-space: nowrap;
+	max-width: 300px;
+   }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 60vh;
+			weight: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .kuang{
+            position: relative;
+            width: 140px;
+            height: 20px;
+            border-radius: 0px;
+           /*  background-color: rgba(204, 197, 197,.5); */
+            box-shadow: inset 5px 5px 10px rgba(204, 197, 197,.5),
+                        inset -5px -5px 8px rgba(204, 197, 197,.5);
+        }
+        .kuang input{
+            position: absolute;
+            top: 0;
+            left: 0px;
+            height: 20px;
+            width: 140px;
+            font-size: 15px;
+            outline: none;
+            border: none;
+        }
+        .kuang input::placeholder{
+            color: rgba(68, 67, 67,.8);
+        }
+        .conceal{
+	position: absolute;
+	top: 0px;
+	right: -27px;
+	width: 25px;
+	height: 20px;
+	background-image: url(images/eyeclose.png);
+	background-size: 100% 100%;
+	cursor: pointer;
+        }
+        .conceal.yincang{
+            background-image: url(images/eyeopen.png);
+            background-size: 100% 100%; 
+        }
+-->
+</style>
+</head>
+<!-- ONDRAGSTART="window.event.returnValue=false" onSelectStart="event.returnValue=false" ONCONTEXTMENU="window.event.returnValue=false"-->
+<body topmargin="0">
+<form name="Books" method="POST" enctype="multipart/form-data" action="https://netinfo.takming.edu.tw/tip/login_xx.php">
+<input type="hidden" name="DeptNo" value=""><input type="hidden" name="sid" value=""><input type="hidden" name="rowid" size="2" value="">
+<div class="table-responsive">
+<table border="0" width="67%" height="282" align="center">    
+  <tbody><tr>    
+    <td width="80%" height="257" align="center" valign="middle"><p>&nbsp;</p>
+      <table border="0" width="80%" cellspacing="0" bgcolor="#CCCCCC" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0"> 
+       
+        <tbody><tr> 
+          <td width="80%" bgcolor="#CCCCFF" align="center">   
+          
+           <table border="1" cellspacing="1" style="border-collapse: collapse" width="98%" id="AutoNumber1" bordercolor="#660033">              
+              <tbody><tr>
+                <td width="80%">
+                <table border="0" width="100%" align="center">
+                  <tbody><tr>
+                    <td width="80%">
+                     
+                     	                                                                                      
+                                                     
+                     
+					
+					
+					<table border="1" width="90%" id="table1" height="136">
+						
+						<tbody><tr>
+							<td width="811" height="130" align="center" bgcolor="#99CCFF">
+                            <p align="center" style="margin-top: 3; margin-bottom: 0"><img src="./TIP登入_files/title_bee_up.jpg" alt="德明個人入口網站" width="439" height="83" border="0">
+                            <table width="100%" border="1" align="center">
+                              <tbody><tr>
+                                <td width="155" align="center"><p style="font-size:16px;font-family:微軟正黑體;">TIP帳號Account</p>
+                                  <p style="font-size:16px;font-family:微軟正黑體;">[員編或學號]</p></td>
+                                
+                                <td width="643"><span style="font-size:16px;font-family:微軟正黑體;">
+                                  <input type="text" name="key_id" style="font-size:16px" size="13">
+                                </span></td>
+                              </tr>
+                              <tr>
+                                <td align="center"><span style="font-size:16px;font-family:微軟正黑體;">TIP密碼<br>Password</span></td>
+                                <td>
+                                <div class="kuang">
+       <input type="password" placeholder="" id="key_pwd" name="key_pwd"> 
+       <div class="conceal" id="conceal"></div>
+   </div><!--<input type="password" name="key_pwd" id="key_pwd" style="font-size:16px;background-color: #DDFF99" size="15" >-->
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="54" align="center"><span style="font-size: 16px; font-family: &quot;微軟正黑體&quot;;">驗證碼Code</span></td>
+                                <td><input type="text" placeholder="請輸入五位數字" size="12" name="cap"> <img src="./TIP登入_files/image.php" id="cap" style="vertical-align:middle"><img src="./TIP登入_files/refresh.png" width="32" height="32" onclick="refreshcap();" style="vertical-align:middle"><br></td>
+                              </tr>
+                              <tr>
+                                <td align="center"><span style="font-size:16px;font-family:微軟正黑體;">登入Login</span></td>
+                                
+                                <td><p><span class="style18" style="margin-top: 3; margin-bottom: 3"><font size="2">
+                                  <!-- <input type="button" value="上班登錄" style="width:100px;height:50px;font-size:16px" name="B3" onClick="chk(1);">
+                                  <input type="button" value="下班登錄" style="width:100px;height:50px;font-size:16px" name="B" onClick="chk(2);">-->
+                                  <input type="submit" value="登入TIP(Login)" style="width:150px;height:50px;font-size:18px" name="B3"><font color="#FF0000"><strong>密碼區分大小寫</strong></font><input type="button" value="忘記密碼(Forget)" style="width:150px;height:40px;font-size:15px;margin-left:120px" name="B3" onclick="ForgetPWD();"></font></span></p>
+                                  
+                              </td></tr>
+                              <tr>
+                                <td align="center"><span style="font-size:16px;font-family:微軟正黑體;">備註Notes</span></td>
+                                <td><p><span style="font-size: 16px; font-family: &quot;微軟正黑體&quot;;">1.登入TIP時若密碼是使用身份證號碼[外籍生為居留證或護照號碼]，</span></p>
+                                  <p><span style="font-size: 16px; font-family: &quot;微軟正黑體&quot;;">需修改密碼後重新登入！</span></p>
+                                  <p><span style="font-size: 16px; font-family: &quot;微軟正黑體&quot;;"><font color="#990033">2.建議每半年變更密碼！</font>新生若無法登入，請洽教務處查驗資料正確性！</span></p>
+                                  <p><span style="font-size: 16px; font-family: &quot;微軟正黑體&quot;;">3.忘記密碼功能將寄發新密碼至您設定的<font color="#990066"><strong>校外信箱</strong></font></span><br>
+                                  </p><p><span style="font-size: 16px; font-family: &quot;微軟正黑體&quot;;">學生未設定校外信箱請攜學生證至電算中心辦理！</span></p>
+                                  <p><span style="font-size: 16px; font-family: &quot;微軟正黑體&quot;;"><font color="#990066"><strong>4.學生若未完成手機及校外信箱雙驗證，無法使用TIP，請執行登入並完成雙驗證！</strong></font></span></p>
+                                  <p><span style="font-size: 16px; font-family: &quot;微軟正黑體&quot;;">5.<font size="+2"><a href="https://netinfo.takming.edu.tw/tip/TIP%E7%99%BB%E5%85%A5%E8%AA%BF%E6%95%B4%E8%AA%AA%E6%98%8E.pdf" target="_blank">TIP登入說明文件</a></font></span></p>
+                                  </td>
+                              </tr>
+                              
+                              
+                              </tbody></table></p></td>
+                            </tr>
+                          </tbody></table></td>
+					  </tr>
+					</tbody></table>
+					
+					
+						
+                  </td>                                             
+                </tr>
+                  
+              </tbody></table>
+            </td>
+          </tr>
+            </tbody></table>
+         
+          </td> 
+        </tr> 
+        
+      </tbody></table> 
+   </div>   
+    
+    
+    
+      
+    
+  
+</form>
+<p>　
+<script>
+       var password = document.getElementById('key_pwd');
+       var anniu = document.getElementById('conceal');
+       anniu.addEventListener('click',function(){
+           if(password.type==='password')
+           {
+               password.setAttribute('type','text');
+               anniu.classList.add('yincang');
+           }else{
+            password.setAttribute('type','password');
+               anniu.classList.remove('yincang');
+           }
+       })
+</script>
+    
+    
+</p></body></html>
